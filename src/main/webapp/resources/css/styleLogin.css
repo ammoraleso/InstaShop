@@ -1,0 +1,42 @@
+ 
+body.login-page {
+    /*Determina la ubicación de la pantalla que no se repita y que se ajuste al centro ocupando toda la pantalla;*/
+    background: url("#{resource['/images/Gafufos.jpg']}") center center fixed;
+    /*Ajusta la imagen a la pantalla;*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+/*Determina la ubicación de la pantalla que no se repita y que se ajuste al centro ocupando toda la pantalla;*/
+div.login-box{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card{
+    opacity:0.90;
+}
+
+/* Si se desea cambiar el estilo del botón del login solo se pone styleClass pink */
+.btn.pink{
+    background-color: #E91E63 !important;
+    border-radius: 2px;
+    border: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+

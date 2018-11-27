@@ -7698,7 +7698,10 @@ fieldset[disabled] .form-control {
 
 /* Login Page ================================== */
 .login-page {
-    background-color: rgba(212, 0, 198, 0.24);
+    /*background-color: rgba(212, 0, 198, 0.24);*/
+    /*background-color: #2196f3;*/
+    background-image:  url('../images/Fondo.jpg');;
+    background: url('../Fondo.jpg');
     padding-left: 0;
     max-width: 360px;
     margin: 5% auto;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="menuGafufos/View.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="errorpage/404.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="index.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="theme/List.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="usuarios/List.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="menuGafufos/List.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="usuarios/Create.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="errorpage/500.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="menuGafufos/Edit.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="login.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="template.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="menuGafufos/Create.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="usuarios/Edit.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="theme/Edit.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="theme/Create.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="theme/View.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="usuarios/View.xhtml" x="650" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

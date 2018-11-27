@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewMenuGafufosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_codigo}"/>
+                    <h:outputText value="#{menuGafufosController.selected.codigo}" title="#{bundle.ViewMenuGafufosTitle_codigo}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_nombre}"/>
+                    <h:outputText value="#{menuGafufosController.selected.nombre}" title="#{bundle.ViewMenuGafufosTitle_nombre}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_url}"/>
+                    <h:outputText value="#{menuGafufosController.selected.url}" title="#{bundle.ViewMenuGafufosTitle_url}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_tipo}"/>
+                    <h:outputText value="#{menuGafufosController.selected.tipo}" title="#{bundle.ViewMenuGafufosTitle_tipo}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_nivel}"/>
+                    <h:outputText value="#{menuGafufosController.selected.nivel}" title="#{bundle.ViewMenuGafufosTitle_nivel}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_padre}"/>
+                    <h:outputText value="#{menuGafufosController.selected.padre}" title="#{bundle.ViewMenuGafufosTitle_padre}"/>
+                    <h:outputText value="#{bundle.ViewMenuGafufosLabel_estado}"/>
+                    <h:outputText value="#{menuGafufosController.selected.estado}" title="#{bundle.ViewMenuGafufosTitle_estado}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{menuGafufosController.destroyAndView}" value="#{bundle.ViewMenuGafufosDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewMenuGafufosEditLink}"/>
+                <br />
+                <h:commandLink action="#{menuGafufosController.prepareCreate}" value="#{bundle.ViewMenuGafufosCreateLink}" />
+                <br />
+                <h:commandLink action="#{menuGafufosController.prepareList}" value="#{bundle.ViewMenuGafufosShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewMenuGafufosIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

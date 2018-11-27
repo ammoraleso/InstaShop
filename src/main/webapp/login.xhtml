@@ -2,10 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
     <h:head>
         <meta charset="UTF-8"/>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
@@ -21,12 +22,13 @@
         </f:facet>
 
 
-        <title>Sign In | Bootstrap Based Admin Template - Material Design</title>
+        <title>Sign In | Gafufos Colombia</title>
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"/>
-
+        <link rel="stylesheet" type="text/css" href="#{resource['/css/styleLogin.css']}"/>
+        
         <!-- Bootstrap Core Css -->
         <h:outputStylesheet library="css" name="bootstrap.css"/>
 
@@ -39,7 +41,7 @@
         <!-- Custom Css -->
         <h:outputStylesheet library="css" name="style.css"/>
         <h:outputStylesheet library="css" name="materialize.css"/>
-
+        
     </h:head>
 
     <h:body class="login-page">
@@ -50,8 +52,8 @@
 
             <div class="login-box" style="margin-top: -15px">
                 <div class="logo">
-                    <a href="javascript:void(0);">Insta<b>Shop</b></a>
-                    <small>Admin BootStrap Based - Material Design</small>
+                    <a href="javascript:void(0);"><b>Gafufos</b>Colombia</a>
+                    <small>#SomosGafufosConEstilo</small>
                 </div>
                 <div class="card">
                     <div class="body">
@@ -61,31 +63,26 @@
                                 <i class="material-icons">person</i>
                             </span>
                             <div class="form-line">
-                                <p:inputText id="userName" class="form-control" value="#{loginController.username}" required="true" label="Username" pt:placeholder="Username"/>
+                                <p:inputText id="userName" styleClass="form-control" value="#{loginBean.user.idUsuario}" required="true" label="Username" pt:placeholder="Username"/>
                             </div>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="material-icons">lock</i>
                             </span>
-                            <div class="form-line">
-                                <p:password class="form-control" value="#{loginController.password}" required="true" label="Password" pt:placeholder="Password"/>
-                            </div>
+                        <div class="form-line">
+                            <p:password styleClass="form-control" value="#{loginBean.user.password}" required="true" label="Password" pt:placeholder="Password"/>
                         </div>
-                        <div class="input-group">
+                        </div>
+<!--                     <div class="input-group">
                             <div class="form-line">
                                 <p:captcha id="captcha" label="captcha" requiredMessage="Captcha is required" />
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row">
-                            <div class="col-xs-8 p-t-5">
-                                <!--                                <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
-                                                                    <label for="rememberme">Remember Me</label>
-                                                                </input>-->
-                            </div>
                             <div class="col-xs-6 pull-right">
                                 <p:defaultCommand target="loginButton" />
-                                <p:commandLink ajax="false" id="loginButton" class="btn btn-block bg-pink waves-effect" action="#{loginController.access()}" update="growlLogin form">
+                                <p:commandLink ajax="false" id="loginButton" styleClass="btn btn-block bg-pink waves-effect" action="#{loginBean.login()}" update="growlLogin form">
                                     <i class="material-icons">lock_open</i>
                                     <h:outputText style="margin-left: 20px" value="INICIAR"/>
                                 </p:commandLink>
@@ -93,9 +90,9 @@
                         </div>
                         <div class="row m-t-15 m-b--20">
                             <div class="col-xs-6">
-                                <a href="sign-up.html">Registrate!</a>
+                                <a href="sign-up.html">Registrate !</a>
                             </div>
-                            <div class="col-xs-6 align-right">
+                            <div  class="col-xs-6 align-right">
                                 <a href="forgot-password.html">Olvide mi contraseña?</a>
                             </div>
                         </div>

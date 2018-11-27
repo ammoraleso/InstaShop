@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateMenuGafufosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_codigo}" for="codigo" />
+                    <h:inputText id="codigo" value="#{menuGafufosController.selected.codigo}" title="#{bundle.CreateMenuGafufosTitle_codigo}" required="true" requiredMessage="#{bundle.CreateMenuGafufosRequiredMessage_codigo}"/>
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_nombre}" for="nombre" />
+                    <h:inputText id="nombre" value="#{menuGafufosController.selected.nombre}" title="#{bundle.CreateMenuGafufosTitle_nombre}" required="true" requiredMessage="#{bundle.CreateMenuGafufosRequiredMessage_nombre}"/>
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_url}" for="url" />
+                    <h:inputText id="url" value="#{menuGafufosController.selected.url}" title="#{bundle.CreateMenuGafufosTitle_url}" />
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_tipo}" for="tipo" />
+                    <h:inputText id="tipo" value="#{menuGafufosController.selected.tipo}" title="#{bundle.CreateMenuGafufosTitle_tipo}" required="true" requiredMessage="#{bundle.CreateMenuGafufosRequiredMessage_tipo}"/>
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_nivel}" for="nivel" />
+                    <h:inputText id="nivel" value="#{menuGafufosController.selected.nivel}" title="#{bundle.CreateMenuGafufosTitle_nivel}" required="true" requiredMessage="#{bundle.CreateMenuGafufosRequiredMessage_nivel}"/>
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_padre}" for="padre" />
+                    <h:inputText id="padre" value="#{menuGafufosController.selected.padre}" title="#{bundle.CreateMenuGafufosTitle_padre}" />
+                    <h:outputLabel value="#{bundle.CreateMenuGafufosLabel_estado}" for="estado" />
+                    <h:inputText id="estado" value="#{menuGafufosController.selected.estado}" title="#{bundle.CreateMenuGafufosTitle_estado}" required="true" requiredMessage="#{bundle.CreateMenuGafufosRequiredMessage_estado}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{menuGafufosController.create}" value="#{bundle.CreateMenuGafufosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{menuGafufosController.prepareList}" value="#{bundle.CreateMenuGafufosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateMenuGafufosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
